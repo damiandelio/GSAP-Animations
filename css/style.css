@@ -3,6 +3,8 @@
 }
 body {
   background-color: #EBEBEB;
+  overflow : hidden;
+  overflow-y : scroll
 }
 
 #header {
@@ -30,21 +32,21 @@ body {
 }
 
 #circulo-abc {
-  position: absolute;
+  position: relative;
   min-height: 24rem;
   min-width: 24rem;
-  margin-top: 20rem;
-  margin-left: 18rem;
+  margin-top: 40rem;
+  margin-left: 0rem;
   background-color: #fd7e14;
   border-radius: 100%;
 }
 
 #circulo-abc-2 {
-  position: absolute;
+  position: relative;
   min-height: 40rem;
   min-width: 40rem;
-  margin-top: -20rem;
-  margin-left: -24rem;
+  margin-top: -40rem;
+  margin-left: -70rem;
   background-color: #fd7e14;
   border-radius: 100%;
 }
@@ -69,6 +71,14 @@ body {
   height: 7rem;
   background-color: #fd7e14;
   border-radius: 10px;
-  transform: translateX(-15rem);
+  transform: translateX(-11rem);
   opacity: 0;
+}
+
+.footer-link {
+  text-decoration: underline;
+}
+
+.footer-link:hover {
+  color: #f8f9fa!important;
 }
