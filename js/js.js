@@ -14,23 +14,41 @@ window.onscroll = () => {
     }
 
     var st = window.pageYOffset || document.documentElement.scrollTop; 
-    if (st > lastScrollTop && window.scrollY > 150){
+    if (st > lastScrollTop && window.scrollY > 300){  // 300px desde el top es lo que tarda en desaparecer el header 
         TweenMax.to("#header", 0.3, {y: -120}); // Scroll para abajo
     } else if (window.scrollY > 1) {
         TweenMax.to("#header", 0.3, {y: -50}); // Scroll para arriba
     }
+    
     lastScrollTop = st;
 
-    if (window.scrollY < 620) {
-        TweenMax.to("#dl", 0, {y: window.scrollY/2});
-        TweenMax.to("#circulo-abc", 0, {y: -window.scrollY/6});
+    if (window.scrollY < 680) {
+        TweenMax.to("#dl", 0.4, {y: window.scrollY/2, ease: Power3.easeOut});
+        TweenMax.to("#circulo-abc", 0.6, {y: -window.scrollY/6, ease: Power1.easeOut});
+        TweenMax.to("#circulo-abc-2", 0.6, {y: window.scrollY/6, ease: Power1.easeOut});
     }
+
+    if (window.scrollY > 420) {
+        TweenMax.to(".card", 0.8, {scale: 1, opacity: 1});
+    }
+
+    if (window.scrollY > 750) {
+        TweenMax.to("#div-01", 0.5, {x: 0, opacity: 1});
+    }
+
+    // Restablece las transiciones
+    if (window.scrollY < 1) {
+        TweenMax.to(".card", 0, {scale: 2, opacity: 0});
+        TweenMax.to("#div-01", 0, {x: -15, opacity: 0});
+    }
+
+    console.log(window.scrollY);
 };
 
-/*document.getElementById('miniatura').onmouseover = () => {
-    TweenMax.to("#header", 0, {scaleY: 2});
-    TweenMax.to("#miniatura", 0, {scale: 2, scaleX: 4, x: 130});
-}*/
 
-//var abcW = document.getElementById('abc').innerWidth;
-//TweenMax.from("#abc", 0.2, {opacity: 0.8, scale: 0, x: -abcW});
+TweenMax.from("#dl", 0.4, {scale: 1.5, opacity: 0, delay: 0.3, ease: Power2.easeInOut});
+TweenMax.from("#circulo-abc", 1, {y: 200, delay: 0.6, ease: Expo.easeOut});
+TweenMax.from("#circulo-abc-2", 1.2, {y: -260, delay: 0.8, ease: Expo.easeOut});
+TweenMax.from("#p", 0.8, {opacity: 0, delay: 1});
+
+//Draggable.create("#dl", {type:"x,y", edgeResistance:0.65, bounds:"#abc", throwProps:true});

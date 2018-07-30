@@ -22,7 +22,7 @@ body {
 }
 
 #abc {
-  height: 35rem;
+  height: 40rem;
   margin-top: 3rem;
   background-color: #DC3545;
   overflow: hidden;
@@ -30,11 +30,21 @@ body {
 }
 
 #circulo-abc {
-  position: relative;
+  position: absolute;
   min-height: 24rem;
   min-width: 24rem;
-  margin-bottom: -36rem;
-  margin-left: 24rem;
+  margin-top: 20rem;
+  margin-left: 18rem;
+  background-color: #fd7e14;
+  border-radius: 100%;
+}
+
+#circulo-abc-2 {
+  position: absolute;
+  min-height: 40rem;
+  min-width: 40rem;
+  margin-top: -20rem;
+  margin-left: -24rem;
   background-color: #fd7e14;
   border-radius: 100%;
 }
@@ -44,4 +54,21 @@ body {
   width: 40%;
   min-width: 8rem;
   max-width: 15rem;
+}
+
+.card {
+  margin: 3rem 1.5rem 0 1.5rem;
+  width: 18rem;
+  height: 20rem;
+  transform: scale(2, 2);
+  opacity: 0;
+}
+
+#div-01 {
+  margin: 10rem 0 10rem 0;
+  height: 7rem;
+  background-color: #fd7e14;
+  border-radius: 10px;
+  transform: translateX(-15rem);
+  opacity: 0;
 }
