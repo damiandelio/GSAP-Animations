@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #EBEBEB;
+}
+
+#header {
+  position: fixed;
+  height: 7rem;
+  width: 100%;
+  min-height: 3rem;
+  z-index: 1000
+}
+
+#miniatura {
+  min-width: 5.5rem;
+  min-height: 5.5rem;
+  border-radius: 100%;
+  background-color: #dc3545;
+  margin-left: -15px;
+}
+
+#abc {
+  height: 35rem;
+  margin-top: 3rem;
+  background-color: #DC3545;
+  overflow: hidden;
+/*  background-image: url("");  */
+}
+
+#circulo-abc {
+  position: relative;
+  min-height: 24rem;
+  min-width: 24rem;
+  margin-bottom: -36rem;
+  margin-left: 24rem;
+  background-color: #fd7e14;
+  border-radius: 100%;
+}
+
+#dl {
+  position: absolute;
+  width: 40%;
+  min-width: 8rem;
+  max-width: 15rem;
+}
